@@ -29,7 +29,7 @@ models.py
 from django.db import models
 from django.contrib import admin
 class CarInventory(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(primary_key=True, max_length=50)
     model = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=15, decimal_places=2)
     manufacture_date = models.DateField()
